@@ -27,7 +27,7 @@ export default {
       if (this.filterCountJudge == true){
         return this.persons.slice(0,2)
       } else {
-        return this.persons.slice(0,4)
+        return this.persons.slice(0,6)
       }
     }
   },
