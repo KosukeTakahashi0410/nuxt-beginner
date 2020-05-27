@@ -4,6 +4,7 @@
       :message="myMessage"
     >
     </Component>
+    <p>{{ test }}</p>
   </div>
 </template>
 
@@ -12,7 +13,8 @@ import Component from '~/components/Component'
 export default {
   data() {
     return {
-      myMessage: 'v-bindを使ったprops'
+      myMessage: 'v-bind props test',
+      test: 'test message'
     }
   },
   components: {
