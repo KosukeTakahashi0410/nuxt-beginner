@@ -5,6 +5,8 @@
     >
     </Component>
     <p>{{ test2 }}</p>
+    <p>{{ test }}</p>
+    <p>テスト2</p>
   </div>
 </template>
 
@@ -15,6 +17,8 @@ export default {
     return {
       myMessage: 'v-bindを使ったprops',
       test2: 'test2です　コンフリクト作るよー'
+      myMessage: 'v-bind props test',
+      test: 'test message'
     }
   },
   components: {

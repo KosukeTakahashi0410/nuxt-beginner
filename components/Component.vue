@@ -1,6 +1,7 @@
 <template>
   <div class="component">
     <p>{{ message }}</p>
+    <p>テストです</p>
   </div>
 </template>
 
