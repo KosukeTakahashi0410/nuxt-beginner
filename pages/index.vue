@@ -1,26 +1,22 @@
 <template>
-  <Test :members="members"></Test>
+  <div class="page">
+    <Component
+      :message="myMessage"
+    >
+    </Component>
+  </div>
 </template>
 
 <script>
-import Test from '@/components/Test.vue'
-
+import Component from '~/components/Component'
 export default {
-  components: {
-    Test
-  },
-  data(){
+  data() {
     return {
-      members: [
-        {name: 'テスト1'},
-        {name: 'テスト2'},
-        {name: 'テスト3'},
-        {name: 'テスト4'},
-        {name: 'テスト5'},
-        {name: 'テスト6'},
-        {name: 'テスト7'}
-      ]
+      myMessage: 'v-bindを使ったprops'
     }
+  },
+  components: {
+    Component: Component,
   }
 }
 </script>
