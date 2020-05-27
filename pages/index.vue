@@ -5,6 +5,7 @@
     >
     </Component>
     <p>{{ test }}</p>
+    <p>テスト2</p>
   </div>
 </template>
 
