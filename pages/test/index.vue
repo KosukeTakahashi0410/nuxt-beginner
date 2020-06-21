@@ -1,41 +1,48 @@
 <template>
   <div>
-    <ul v-for="person in filterPerson">
-      <li>{{ person.name }}</li>
+    <input placeholder="タスクを追加" @keyup.enter="addTodo">
+    <ul>
+      <li v-for="todo in filteredTodo" v-bind:key="todo.id">
+        <input type="checkbox" @change="toggle(todo)">
+        <span>{{ todo.text }}</span>
+      </li>
     </ul>
-    <button @click="changeShowCount"></button>
+    <button @click="changeShowCount">表示件数変更</button>
   </div>
 </template>
 
 <script>
+// Vuex使うのに必要らしい
+import { mapMutations } from 'vuex'
+
 export default {
   data() {
     return{
-      persons: [
-        { name: 'test1' },
-        { name: 'test2' },
-        { name: 'test3' },
-        { name: 'test4' },
-        { name: 'test5' },
-        { name: 'test6' }
-      ],
+      todos: this.$store.getters['todo/getTodos'],
       filterCountJudge: true
     }
   },
   computed: {
-    filterPerson: function() {
+    filteredTodo: function() {
       if (this.filterCountJudge == true){
-        return this.persons.slice(0,2)
+        return this.todos.slice(0,1)
       } else {
-        return this.persons.slice(0,6)
+        return this.todos
       }
     }
   },
   methods: {
+    addTodo(e) {
+      this.$store.dispatch('todo/add', e)
+    },
     changeShowCount: function(){
       this.filterCountJudge = !this.filterCountJudge
       console.log(this.filterCountJudge)
-    }
+    },
+    // これ正直あんまりわかってない
+    ...mapMutations({
+      toggle: 'todo/toggle'
+    })
   }
 }
 </script>
