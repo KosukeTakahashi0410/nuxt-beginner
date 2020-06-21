@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    filteredTodo: function() {
+    filteredTodo() {
       if (this.filterCountJudge == true){
         return this.todos.slice(0,1)
       } else {
@@ -35,7 +35,7 @@ export default {
     addTodo(e) {
       this.$store.dispatch('todo/add', e)
     },
-    changeShowCount: function(){
+    changeShowCount() {
       this.filterCountJudge = !this.filterCountJudge
       console.log(this.filterCountJudge)
     },
