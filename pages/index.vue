@@ -1,9 +1,6 @@
 <template>
   <div class="page">
-    <Component
-      :message="myMessage"
-    >
-    </Component>
+    <Component :message="myMessage" />
     <p>{{ test2 }}</p>
     <p>{{ test }}</p>
     <p>テスト2</p>
@@ -16,7 +13,7 @@ export default {
   data() {
     return {
       myMessage: 'v-bindを使ったprops',
-      test2: 'test2です　コンフリクト作るよー'
+      test2: 'test2です　コンフリクト作るよー',
       myMessage: 'v-bind props test',
       test: 'test message'
     }
