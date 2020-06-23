@@ -12,7 +12,7 @@ import Component from '~/components/Component'
 export default {
   data() {
     return {
-      myMessage: 'v-bindを使ったprops',
+      myMessage: 'てすてす',
       test2: 'test2です　コンフリクト作るよー',
       myMessage: 'v-bind props test',
       test: 'test message'
