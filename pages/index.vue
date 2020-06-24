@@ -4,6 +4,7 @@
     <p>{{ test2 }}</p>
     <p>{{ test }}</p>
     <p>テスト2</p>
+    <p>追加した</p>
   </div>
 </template>
 
