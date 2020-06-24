@@ -36,3 +36,5 @@ axiosとか諸々
 
 ## Vuex
 Storeを作ってstateを保持する  
+
+# pullRequest確認のための変更ですたい

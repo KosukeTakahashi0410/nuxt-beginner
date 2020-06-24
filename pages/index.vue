@@ -4,6 +4,8 @@
     <p>{{ test2 }}</p>
     <p>{{ test }}</p>
     <p>テスト2</p>
+    <p>追加した</p>
+    <p>テスト追加</p>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ import Component from '~/components/Component'
 export default {
   data() {
     return {
-      myMessage: 'v-bindを使ったprops',
+      myMessage: 'てすてす',
       test2: 'test2です　コンフリクト作るよー',
       myMessage: 'v-bind props test',
       test: 'test message'
